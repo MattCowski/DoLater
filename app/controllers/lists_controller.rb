@@ -5,6 +5,9 @@ class ListsController < ApplicationController
   # GET /lists.json
   def index
     @lists = List.all
+    sleep 1
+    @incomplete_tasks = List.where(complete: false)
+    @complete_tasks = List.where(complete: true)
   end
 
   # GET /lists/1
@@ -28,11 +31,13 @@ class ListsController < ApplicationController
 
     respond_to do |format|
       if @list.save
-        format.html { redirect_to @list, notice: 'List was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @list }
+        # format.html { redirect_to @list, notice: 'List was successfully created.' }
+        # format.json { render action: 'show', status: :created, location: @list }
+        format.js
       else
-        format.html { render action: 'new' }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
+        # format.html { render action: 'new' }
+        # format.json { render json: @list.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -42,11 +47,13 @@ class ListsController < ApplicationController
   def update
     respond_to do |format|
       if @list.update(list_params)
-        format.html { redirect_to @list, notice: 'List was successfully updated.' }
-        format.json { head :no_content }
+        # format.html { redirect_to @list, notice: 'List was successfully updated.' }
+        # format.json { head :no_content }
+        format.js
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
+        # format.html { render action: 'edit' }
+        # format.json { render json: @list.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -56,8 +63,9 @@ class ListsController < ApplicationController
   def destroy
     @list.destroy
     respond_to do |format|
-      format.html { redirect_to lists_url }
-      format.json { head :no_content }
+      # format.html { redirect_to lists_url }
+      # format.json { head :no_content }
+      format.js
     end
   end
 

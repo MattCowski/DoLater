@@ -1,28 +1,8 @@
-== README
+DoLater - The task app for procrastinators!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+We all get those OMG GOOD IDEA that only seems like it at the moment. Whether it's a idea, task, groupon or "that monitor on sale", these can be really distracting. On the other hand, the important tasks get pushed down and we forget about them... This app is the solution.
 
-Things you may want to cover:
+Summary: On the index page, only the tasks due today are shown. Next to each is a drop box "Do later: 1 hour, 1 day, 3 days, 1 week, 1 month". That's it! (for now)
 
-* Ruby version
+This app will demonstrate all I can do with jquery, Ajax, js and then convert into coffeescript. Later I might get into Angular or EmberJS.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
